@@ -1,0 +1,272 @@
+
+ann
+  "nonexhaustiveBind warn" "nonexhaustiveMatch warn"
+  "redundantBind warn" "redundantMatch warn"
+  "sequenceNonUnit ignore"
+  "warnUnused false" "forceUsed"
+  "allowOrPats true" "allowSigWithtype true" "allowVectorExpsAndPats true"
+in
+
+local
+  basis l8 =
+    bas
+      (* $/basis.cm ====> *) $(SML_LIB)/basis/basis.mlb $(SML_LIB)/basis/unsafe.mlb
+    end
+in
+local
+   $(SML_LIB)/basis/pervasive.mlb
+   local
+      ../library/array-noneq.sig
+   in
+      signature gs_0 = ARRAY_NONEQ
+   end
+   local
+      open l8
+   in
+      structure gs_1 = ArraySlice
+   end
+   local
+      open l8
+   in
+      structure gs_2 = Array
+   end
+   local
+      open l8
+   in
+      structure gs_3 = Vector
+   end
+   local
+      open l8
+   in
+      structure gs_4 = General
+   end
+   local
+      open l8
+   in
+      structure gs_5 = Int
+   end
+   local
+      signature ARRAY_NONEQ = gs_0
+      structure Array = gs_2
+      structure ArraySlice = gs_1
+      structure General = gs_4
+      structure Int = gs_5
+      structure Vector = gs_3
+      ../library/dynamic-array.sml
+   in
+      structure gs_6 = DynArray
+   end
+   local
+      open l8
+   in
+      structure gs_7 = String
+   end
+   local
+      open l8
+   in
+      structure gs_8 = Word
+   end
+   local
+      open l8
+   in
+      structure gs_9 = Word8
+   end
+   local
+      open l8
+   in
+      structure gs_10 = Word8Array
+   end
+   local
+      ../library/bitset.sig
+   in
+      signature gs_11 = BITSET
+   end
+   local
+      signature BITSET = gs_11
+      structure String = gs_7
+      structure Word = gs_8
+      structure Word8 = gs_9
+      structure Word8Array = gs_10
+      ../library/bitset.sml
+   in
+      structure gs_12 = BitSet
+   end
+   local
+      open l8
+   in
+      structure gs_13 = TextIO
+   end
+   local
+      structure TextIO = gs_13
+      ../library/stringOutStream.sig
+   in
+      signature gs_14 = STRING_OUTSTREAM
+   end
+   local
+      structure String = gs_7
+      ../library/line-break.sml
+   in
+      signature gs_15 = LINE_BREAK
+      structure gs_16 = LineBreak
+   end
+   local
+      open l8
+   in
+      structure gs_17 = Real
+   end
+   local
+      open l8
+   in
+      structure gs_18 = List
+   end
+   local
+      open l8
+   in
+      structure gs_19 = IntInf
+   end
+   local
+      structure Int = gs_5
+      structure IntInf = gs_19
+      structure List = gs_18
+      structure Real = gs_17
+      ../library/probability.sml
+   in
+      signature gs_20 = PROBABILITY
+      structure gs_21 = Probability
+   end
+   local
+      open l8
+   in
+      structure gs_22 = TextPrimIO
+   end
+   local
+      open l8
+   in
+      structure gs_23 = CharArraySlice
+   end
+   local
+      open l8
+   in
+      structure gs_24 = CharVectorSlice
+   end
+   local
+      open l8
+   in
+      structure gs_25 = IO
+   end
+   local
+      structure CharArraySlice = gs_23
+      structure CharVectorSlice = gs_24
+      structure IO = gs_25
+      structure List = gs_18
+      signature STRING_OUTSTREAM = gs_14
+      structure String = gs_7
+      structure TextIO = gs_13
+      structure TextPrimIO = gs_22
+      ../library/stringOutStream.sml
+   in
+      structure gs_26 = StringOutStream
+   end
+   local
+      ../library/catlist.sml
+   in
+      signature gs_27 = CATNETABLE_LIST
+      structure gs_28 = CatnetableList
+   end
+   local
+      ../library/priQueue.sig
+   in
+      signature gs_29 = PRIORITY_QUEUE
+   end
+   local
+      structure Array = gs_2
+      signature PRIORITY_QUEUE = gs_29
+      ../library/heap.sml
+   in
+      structure gs_30 = PriorityHeap
+   end
+   local
+      ../library/annotations.sig
+   in
+      signature gs_31 = ANNOTATIONS
+   end
+   local
+      signature ANNOTATIONS = gs_31
+      ../library/annotations.sml
+   in
+      structure gs_32 = Annotations
+   end
+   local
+      signature ARRAY_NONEQ = gs_0
+      structure Array = gs_2
+      structure List = gs_18
+      structure Vector = gs_3
+      structure Word = gs_8
+      ../library/hash-array.sml
+   in
+      structure gs_33 = HashArray
+   end
+   local
+      ../library/cache.sml
+   in
+      signature gs_34 = CACHE_REF
+      structure gs_35 = CacheRef
+   end
+   local
+      ../library/sortedlist.sml
+   in
+      structure gs_36 = SortedList
+   end
+   local
+      structure Int = gs_5
+      signature PRIORITY_QUEUE = gs_29
+      ../library/priQueue.sml
+   in
+      structure gs_37 = PriorityQueue
+   end
+   local
+      open l8
+   in
+      signature gs_38 = INTEGER
+   end
+   local
+      signature INTEGER = gs_38
+      ../library/freq.sig
+   in
+      signature gs_39 = FREQ
+   end
+   local
+      signature FREQ = gs_39
+      structure Int = gs_5
+      ../library/freq.sml
+   in
+      structure gs_40 = Freq
+   end
+in
+   signature ANNOTATIONS = gs_31
+   signature ARRAY_NONEQ = gs_0
+   structure Annotations = gs_32
+   signature BITSET = gs_11
+   structure BitSet = gs_12
+   signature CACHE_REF = gs_34
+   signature CATNETABLE_LIST = gs_27
+   structure CacheRef = gs_35
+   structure CatnetableList = gs_28
+   structure DynArray = gs_6
+   signature FREQ = gs_39
+   structure Freq = gs_40
+   structure HashArray = gs_33
+   signature LINE_BREAK = gs_15
+   structure LineBreak = gs_16
+   signature PRIORITY_QUEUE = gs_29
+   signature PROBABILITY = gs_20
+   structure PriorityHeap = gs_30
+   structure PriorityQueue = gs_37
+   structure Probability = gs_21
+   signature STRING_OUTSTREAM = gs_14
+   structure SortedList = gs_36
+   structure StringOutStream = gs_26
+end
+end
+
+end

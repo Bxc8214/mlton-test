@@ -1,0 +1,279 @@
+
+ann
+  "nonexhaustiveBind ignore" "nonexhaustiveMatch ignore"
+  "redundantBind warn" "redundantMatch warn"
+  "sequenceNonUnit ignore"
+  "warnUnused false" "forceUsed"
+in
+
+local
+  basis l4 =
+    bas
+      (* $/basis.cm ====> *) $(SML_LIB)/basis/basis.mlb
+    end
+  basis l8 =
+    bas
+      (* $/smlnj-lib.cm ====> *) $(SML_LIB)/smlnj-lib/Util/smlnj-lib.mlb
+    end
+  basis l55 =
+    bas
+      (* $/ml-lpt-lib.cm ====> *) $(SML_LIB)/mllpt-lib/mllpt-lib.mlb
+    end
+in
+local
+   $(SML_LIB)/basis/pervasive.mlb
+   local
+      open l4
+   in
+      structure gs_0 = String
+   end
+   local
+      open l8
+   in
+      structure gs_1 = Atom
+   end
+   local
+      structure Atom = gs_1
+      structure String = gs_0
+      html4-utils.sml
+   in
+      structure gs_2 = HTML4Utils
+   end
+   local
+      open l8
+   in
+      structure gs_3 = Format
+   end
+   local
+      open l4
+   in
+      structure gs_4 = IntInf
+   end
+   local
+      open l4
+   in
+      structure gs_5 = List
+   end
+   local
+      structure Atom = gs_1
+      structure IntInf = gs_4
+      html4.sig
+   in
+      signature gs_6 = HTML4
+   end
+   local
+      structure Atom = gs_1
+      signature HTML4 = gs_6
+      structure IntInf = gs_4
+      html4.sml
+   in
+      structure gs_7 = HTML4
+   end
+   local
+      structure Atom = gs_1
+      structure Format = gs_3
+      structure HTML4 = gs_7
+      structure IntInf = gs_4
+      structure List = gs_5
+      structure String = gs_0
+      html4-print.sml
+   in
+      structure gs_8 = HTML4Print
+   end
+   local
+      structure Atom = gs_1
+      html4-attrs.sml
+   in
+      structure gs_9 = HTML4Attrs
+   end
+   local
+      open l8
+   in
+      signature gs_10 = ORD_MAP
+   end
+   local
+      open l8
+   in
+      functor gs_11 = RedBlackMapFn
+   end
+   local
+      open l4
+   in
+      structure gs_12 = CharVectorSlice
+   end
+   local
+      open l4
+   in
+      structure gs_13 = Substring
+   end
+   local
+      open l4
+   in
+      structure gs_14 = Char
+   end
+   local
+      open l55
+   in
+      structure gs_15 = AntlrStreamPos
+   end
+   local
+      open l4
+   in
+      structure gs_16 = TextIO
+   end
+   local
+      open l55
+   in
+      functor gs_17 = AntlrErrHandler
+   end
+   local
+      open l55
+   in
+      signature gs_18 = ANTLR_LEXER
+   end
+   local
+      signature ANTLR_LEXER = gs_18
+      functor AntlrErrHandler = gs_17
+      structure Atom = gs_1
+      structure HTML4Utils = gs_2
+      structure IntInf = gs_4
+      structure List = gs_5
+      html4.g.sml
+   in
+      functor gs_19 = HTML4ParseFn
+      structure gs_20 = HTML4Tokens
+   end
+   local
+      signature ANTLR_LEXER = gs_18
+      functor AntlrErrHandler = gs_17
+      structure Atom = gs_1
+      structure List = gs_5
+      structure String = gs_0
+      html4-attr.g.sml
+   in
+      functor gs_21 = HTML4AttrParseFn
+      structure gs_22 = HTML4AttrTokens
+   end
+   local
+      open l4
+   in
+      structure gs_23 = Vector
+   end
+   local
+      open l55
+   in
+      structure gs_24 = ULexBuffer
+   end
+   local
+      open l55
+   in
+      structure gs_25 = UTF8
+   end
+   local
+      structure AntlrStreamPos = gs_15
+      structure Atom = gs_1
+      functor HTML4AttrParseFn = gs_21
+      structure HTML4AttrTokens = gs_22
+      structure List = gs_5
+      structure String = gs_0
+      structure Substring = gs_13
+      structure TextIO = gs_16
+      structure ULexBuffer = gs_24
+      structure UTF8 = gs_25
+      structure Vector = gs_23
+      html4-attr.l.sml
+   in
+      structure gs_26 = HTML4AttrLexer
+   end
+   local
+      structure AntlrStreamPos = gs_15
+      structure Atom = gs_1
+      structure Char = gs_14
+      structure CharVectorSlice = gs_12
+      structure HTML4AttrLexer = gs_26
+      functor HTML4AttrParseFn = gs_21
+      structure HTML4AttrTokens = gs_22
+      functor HTML4ParseFn = gs_19
+      structure HTML4Tokens = gs_20
+      structure HTML4Utils = gs_2
+      structure IntInf = gs_4
+      signature ORD_MAP = gs_10
+      functor RedBlackMapFn = gs_11
+      structure String = gs_0
+      structure Substring = gs_13
+      structure TextIO = gs_16
+      html4-token-utils.sml
+   in
+      structure gs_27 = HTML4TokenUtils
+   end
+   local
+      structure Atom = gs_1
+      structure HTML4 = gs_7
+      html4-entities.sml
+   in
+      structure gs_28 = HTML4Entities
+   end
+   local
+      open l4
+   in
+      structure gs_29 = CharVector
+   end
+   local
+      open l4
+   in
+      structure gs_30 = Option
+   end
+   local
+      open l4
+   in
+      structure gs_31 = StringCvt
+   end
+   local
+      structure AntlrStreamPos = gs_15
+      structure Atom = gs_1
+      structure HTML4TokenUtils = gs_27
+      structure IntInf = gs_4
+      structure List = gs_5
+      structure String = gs_0
+      structure StringCvt = gs_31
+      structure Substring = gs_13
+      structure TextIO = gs_16
+      structure ULexBuffer = gs_24
+      structure UTF8 = gs_25
+      structure Vector = gs_23
+      html4.l.sml
+   in
+      structure gs_32 = HTML4Lexer
+   end
+   local
+      structure AntlrStreamPos = gs_15
+      structure Atom = gs_1
+      structure Char = gs_14
+      structure CharVector = gs_29
+      structure HTML4 = gs_7
+      structure HTML4Lexer = gs_32
+      functor HTML4ParseFn = gs_19
+      structure HTML4TokenUtils = gs_27
+      structure HTML4Tokens = gs_20
+      structure HTML4Utils = gs_2
+      structure Option = gs_30
+      structure String = gs_0
+      structure TextIO = gs_16
+      html4-parser.sml
+   in
+      structure gs_33 = HTML4Parser
+   end
+in
+   signature HTML4 = gs_6
+   structure HTML4 = gs_7
+   structure HTML4Attrs = gs_9
+   structure HTML4Entities = gs_28
+   structure HTML4Parser = gs_33
+   structure HTML4Print = gs_8
+   structure HTML4TokenUtils = gs_27
+   structure HTML4Tokens = gs_20
+   structure HTML4Utils = gs_2
+end
+end
+
+end

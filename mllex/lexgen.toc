@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}General Description}{3}
+\contentsline {section}{\numberline {2}ML-Lex specifications}{4}
+\contentsline {section}{\numberline {3}Regular expressions}{4}
+\contentsline {section}{\numberline {4}ML-Lex syntax summary}{6}
+\contentsline {subsection}{\numberline {4.1}User declarations}{6}
+\contentsline {subsection}{\numberline {4.2}ML-Lex definitions}{6}
+\contentsline {subsection}{\numberline {4.3}Rules}{7}
+\contentsline {section}{\numberline {5}Values available inside the code associated with a rule.}{8}
+\contentsline {paragraph}{Bug.}{8}
+\contentsline {section}{\numberline {6}Running ML-Lex}{9}
+\contentsline {section}{\numberline {7}Using the program produced by ML-Lex}{9}
+\contentsline {section}{\numberline {8}Sample}{10}
